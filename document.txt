@@ -1,0 +1,1 @@
+команда для запуска npm в проекте - npm run sass-watch

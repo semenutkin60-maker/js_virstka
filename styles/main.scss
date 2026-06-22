@@ -10,3 +10,17 @@
 @use 'blocks/burger-button';
 @use 'blocks/header';
 
+@use 'blocks/footer';
+@use 'blocks/badge';
+@use 'blocks/soc1als';
+
+@use 'blocks/metrics';
+@use 'blocks/team';
+@use 'blocks/resources-preview';
+@use 'blocks/advantages-card';
+@use 'blocks/hero';
+
+.header,
+.footer {
+    display: none;
+}

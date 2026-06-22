@@ -8,6 +8,20 @@
         row-gap: rem(20);
     }
 
+    @include mobile {
+        row-gap: rem(14);
+    }
+
+    &__image {
+        @include laptop {
+            width: rem(40);
+        }
+
+        @include mobile {
+            width: rem(30);
+        }
+    }
+
     &__link {
         --circlSize: #{rem(52)};
         --circlMarginLeft: #{rem(20)};
@@ -36,6 +50,10 @@
             var(--color-accent)
             ;
             border-radius: 50%;
+        }
+
+        @include mobile {
+            --circlSize: #{rem(40)};
         }
     }
 

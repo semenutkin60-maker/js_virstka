@@ -16,9 +16,9 @@
         background-size: contain;
         background-repeat: no-repeat;
 
-        // @include laptop {
-        //     --size: rem(20);
-        // }
+        @include laptop {
+            --size: rem(20);
+        }
     }   
 
     &--yellow-arrow {

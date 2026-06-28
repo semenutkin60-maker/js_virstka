@@ -35,6 +35,10 @@
         &-main {
             display: grid;
             row-gap: fluid(50, 24);
+
+            @include tablet {
+                justify-content: start;
+            }
         }
 
         &-icon {
@@ -51,7 +55,7 @@
         padding-right: 0;
 
         @include tablet {
-            padding: rem(30) rem(16);
+            padding: rem(30) 0;
         }
     }
 
@@ -68,12 +72,15 @@
         }
 
         &--2-cols-alt {
-            grid-template-columns: auto 1fr;
             gap: rem(30) rem(20);
 
             @include laptop {
                 gap: rem(24) rem(16);
             } 
+
+            @include mobile-above {
+                grid-template-columns: auto 1fr;
+            }
         }
     }
 

@@ -1253,10 +1253,10 @@ button[aria-label]::before {
   font-weight: 500;
   pointer-events: none;
 }
-.tabs__contact:not(.is-active) {
+.tabs__content:not(.is-active) {
   display: none;
 }
-.tabs__contact:focus-visible {
+.tabs__content:focus-visible {
   outline-offset: -1rem;
 }
 

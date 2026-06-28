@@ -461,6 +461,9 @@ button[aria-label]::before {
 .icon--yellow-arrow::after {
   background-image: url("../../icons/arrow-top-right_yellow.svg");
 }
+.icon--yellow-yey::after {
+  background-image: url("../../icons/yey_yellow.svg");
+}
 
 .logo {
   max-width: clamp(7.875rem, 7.0306372549rem + 3.4640522876vw, 11.1875rem);
@@ -504,6 +507,9 @@ button[aria-label]::before {
   background-color: var(--color-accent);
   border-color: var(--color-accent);
   border-radius: 0.5rem;
+}
+.button--dark-gray {
+  background-color: var(--color-dark-10);
 }
 
 .burger-button {
@@ -1191,11 +1197,51 @@ button[aria-label]::before {
     grid-template-columns: 1fr;
   }
 }
+.card__grid--2-cols-alt {
+  grid-template-columns: auto 1fr;
+  gap: 1.875rem 1.25rem;
+}
+@media (width <= 90.06125rem) {
+  .card__grid--2-cols-alt {
+    gap: 1.5rem 1rem;
+  }
+}
 .card__cell {
   display: flex;
   flex-direction: column;
   justify-content: start;
   row-gap: clamp(0.25rem, -0.0049019608rem + 1.045751634vw, 1.25rem);
+}
+.card__cell:has(> *:only-child) {
+  justify-content: center;
+}
+.card__cell:has(.card__cell-link) {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "other link" "other link";
+  align-items: center;
+  column-gap: 1.25rem;
+}
+.card__cell--wide {
+  grid-column: -1/1;
+}
+.card__cell-image {
+  width: 100%;
+  height: clamp(10.5625rem, 11.1519607843rem + -2.4183006536vw, 8.25rem);
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+@media (width <= 90.06125rem) {
+  .card__cell-image {
+    border-radius: 0.625rem;
+  }
+}
+.card__cell-subtitle {
+  font: inherit;
+  color: inherit;
+}
+.card__cell-link {
+  grid-area: link;
 }
 
 .tabs__header {
@@ -1386,6 +1432,28 @@ button[aria-label]::before {
 @media (width <= 63.99875rem) {
   .blog-card__link {
     grid-area: link;
+  }
+}
+
+.dowload-info {
+  display: inline-grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  column-gap: 3.125rem;
+}
+@media (width <= 90.06125rem) {
+  .dowload-info {
+    column-gap: 1.875rem;
+  }
+}
+.dowload-info__team {
+  --personImageSize: 3.125rem;
+  background-color: var(--color-dark);
+  border-radius: 0.75rem;
+}
+@media (width <= 90.06125rem) {
+  .dowload-info__team {
+    --personImageSize: 2.5rem;
   }
 }
 

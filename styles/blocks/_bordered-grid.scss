@@ -18,30 +18,40 @@
         @include laptop{
             --itemPaddingX: #{rem(40)};
         }
-        
-        .bordered-grid__item {
-            /**
-                Элементы 1 и 2 колонки
-            */
-            &:nth-child(3n - 2),
-            &:nth-child(3n - 1) {
-                padding-right: var(--itemPaddingX);
-                border-right: var(--border);
-            }
 
-            /* 
-                Элементы во 2-ой колонке
-            */
-            &:nth-child(3n -1) {
-                @include full-vw-centered-line(bottom);
-            }
+        @include tablet-above {
+            .bordered-grid__item {
+                /**
+                    Элементы 1 и 2 колонки
+                */
+                &:nth-child(3n - 2),
+                &:nth-child(3n - 1) {
+                    padding-right: var(--itemPaddingX);
+                    border-right: var(--border);
+                }
 
-            /* 
-                Эдементы во 2-ой и 3-й колонке
-            */
-            &:nth-child(3n - 1),
-            &:nth-child(3n) {
-                padding-left: var(--itemPaddingX);
+                /* 
+                    Элементы во 2-ой колонке
+                */
+                &:nth-child(3n -1) {
+                    @include full-vw-centered-line(bottom);
+                }
+
+                /* 
+                    Эдементы во 2-ой и 3-й колонке
+                */
+                &:nth-child(3n - 1),
+                &:nth-child(3n) {
+                    padding-left: var(--itemPaddingX);
+                }
+            }
+        }
+
+        @include tablet {
+            --columns: 1;
+
+            .bordered-grid__item:not(:last-child) {
+                border-bottom: var(--border);
             }
         }
     }

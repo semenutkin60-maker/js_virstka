@@ -1,12 +1,18 @@
 @use '../helpers' as *;
 
 .person-card {
+    --iamgeSize: #{rem(80)};
+
     display: flex;
     align-items: center;
     column-gap: fluid(16, 8);
 
+    @include laptop {
+        --iamgeSize: #{rem(60)};
+    }
+
     &__image {
-        width: rem(80);
+        width: var(--iamgeSize);
         border-radius: 50%;
         background-color: var(--color-dark-15);
 
@@ -25,7 +31,7 @@
 
     &__name {
         color: var(--color-light);
-        font-weight: 600;
+        font-weight: 600    ;
         font-size: rem(20);
 
         @include laptop {

@@ -33,6 +33,10 @@
 
 @use 'blocks/dowload-info';
 
+@use 'blocks/bordered-grid';
+@use 'blocks/raiting-view';
+@use 'blocks/reviews-card';
+
 .header,
 main > *:not(:last-child),
 .footer {

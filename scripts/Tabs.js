@@ -3,7 +3,7 @@ const rootSelector = '[data-js-tabs]'
 class Tabs {
     selectors = {
         root: rootSelector,
-        button: '[data-js-tab-button]', // 👈 Убрал 's'
+        button: '[data-js-tab-button]',
         content: '[data-js-tabs-content]',
     }
 

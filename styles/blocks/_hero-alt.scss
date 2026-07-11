@@ -3,6 +3,7 @@
 .hero-alt {
     &__header {
         &-inner {
+            border-bottom: var(--border);
             padding-top: fluid(130, 40);
             padding-bottom: fluid(150, 40);
             display: grid;

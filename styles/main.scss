@@ -48,6 +48,9 @@
 @use 'blocks/video-player';
 @use 'blocks/video-card';
 
+@use 'blocks/table-of-contents';
+@use 'blocks/blog-details';
+
 .header,
 main > *:not(:last-child),
 .footer {

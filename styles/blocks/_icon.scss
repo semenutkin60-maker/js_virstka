@@ -17,7 +17,7 @@
         background-repeat: no-repeat;
 
         @include laptop {
-            --size: rem(20);
+            // --size: rem(20);
         }
     }   
 
@@ -30,6 +30,12 @@
     &--yellow-yey {
         &::after {
             background-image: url('../../icons/yey_yellow.svg');
+        }
+    }
+
+    &--gray-arrow-down {
+        &::after {
+            background-image: url('../../icons/arrow-down_gray.svg');
         }
     }
 }

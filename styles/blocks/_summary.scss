@@ -1,8 +1,39 @@
 @use '../helpers' as *;
 
 .summary {
+    &--2-cols {
+        .summary {
+            &__list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                
+                @include laptop {
+                    row-gap: rem(20);
+                }
+            }
+
+            &__item {
+                row-gap: fluid(10, 4);
+                margin-top: rem(30);
+
+                @include laptop {
+                    margin-top: rem(20);
+                }
+
+                &--wide {
+                    grid-column: -1 / 1;
+                    margin-top: rem(20);
+                    row-gap: fluid(16, 10);
+                }
+            }
+        }
+
+        
+    }
+
     &__list {
         display: flex;
+        flex-wrap: wrap;
         column-gap: fluid(50, 20);
     }
 

@@ -32,9 +32,14 @@
     }
 
     &__list {
-        display: flex;
+        display: block;
         flex-wrap: wrap;
         column-gap: fluid(50, 20);
+
+        &-c {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__item {

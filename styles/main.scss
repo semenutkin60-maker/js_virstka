@@ -50,6 +50,7 @@
 
 @use 'blocks/table-of-contents';
 @use 'blocks/blog-details';
+@use 'blocks/expandable-content__button';
 
 .header,
 main > *:not(:last-child),
